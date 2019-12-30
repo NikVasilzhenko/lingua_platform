@@ -1,0 +1,100 @@
+.booking-step-1{
+  margin-bottom: 140px;
+  .sec__title{margin-bottom: 16px;}
+  &__contry{
+    color: $clr-grey;
+    margin-bottom: 34px;
+    font-size: 24px;
+    line-height: 118.5%;
+  }
+  &__wrap{@include flex-start-between;}
+  &__bar{
+    width: 333px;
+    &-sub{
+      text-align: center;
+      margin-top: 10px;
+      font-weight: 300;
+      font-size: 13px;
+      color: $clr-grey;
+    }
+  }
+  &__form{
+    background: #fff;
+    border: 1px solid rgba(38, 38, 38, .1);
+    border-radius: 5px;
+    padding: 35px 26px;
+  }
+  &__main{
+    width: calc(100% - 333px);
+    max-width: 620px;
+    padding-right: 20px;
+  }
+  &__txt{
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 127.5%;
+  }
+  &__group{
+    margin-bottom: 25px;
+    &:last-child{margin-bottom: 0;}
+    &-title{
+      margin-bottom: 5px;
+      font-size: 24px;
+      line-height: 33px;
+      letter-spacing: .02em;
+    }
+    &-txt{
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: .02em;
+    }
+  }
+  @media only screen and (max-width : 767px){
+    margin-bottom: 90px;
+    .sec__title{margin-bottom: 6px;}
+    &__contry{text-align: center;}
+    &__wrap{display: block;}
+    &__bar{
+      width: 100%;
+      margin-top: 60px;
+    }
+    &__main{
+      width: 100%;
+      max-width: 100%;
+      padding-right: 0;
+    }
+    &__group{
+      &-title{
+        font-size: 20px;
+        line-height: 1.5;
+      }
+    }
+  }  
+}
+.booking-step-2{
+  margin: 0 auto;
+  max-width: 453px;
+  margin-bottom: 140px;
+  &__submit{
+    margin: 47px auto 0;
+    max-width: 264px;
+  }
+  @media only screen and (max-width : 767px){
+    margin-bottom: 90px;
+    &__submit{max-width: 100%;}
+  }
+}
+.ready{
+  margin: 107px 0 146px;
+  text-align: center;
+  .sec__title{margin-bottom: 22px;}
+  &__txt{
+    margin-bottom: 52px;
+    font-size: 20px;
+    line-height: 118.5%;
+  }
+  &__back{
+    margin: 0 auto;
+    width: 280px;
+  }
+}

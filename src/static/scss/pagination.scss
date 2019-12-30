@@ -1,0 +1,49 @@
+.pagination{
+  @include flex-center-center;
+  a{
+    display: block;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    margin: 0 8.5px;
+    font-size: 18px;
+    color: $clr-txt;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    &:first-child{margin-left: 0;}
+    &:last-child{margin-right: 0;}
+    &:hover,&.active{
+      background-color: $clr-txt;
+      border-color: $clr-txt;
+      color: #fff;
+    }
+    &.next{
+      font-size: 0;
+      background-image: url(../img/svg/chevrone-next-arrow.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      &:hover{background-image: url(../img/svg/chevrone-next-arrow-white.svg);}
+    }
+  }
+  span{
+    display: block;
+    width: 15px;
+    text-align: center;
+    margin: 0 8.5px;
+  }
+  @media only screen and (max-width : 1023px){
+    span,
+    a{margin: 0 5px;}
+  }
+  @media only screen and (max-width : 767px){
+    a{
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      margin: 0 4px;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+  }
+}

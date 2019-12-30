@@ -1,0 +1,198 @@
+.school{
+  &__sec{
+    margin: 74px 0 97px;
+    @media only screen and (max-width : 767px){margin: 90px 0;}
+    &-txt{
+      margin-bottom: 24px;
+      width: calc(100% - 330px);
+      @media only screen and (max-width : 1023px){width: 100%;}
+      @media only screen and (max-width : 767px){
+        line-height: 22px;
+        margin-bottom: 27px;
+      }
+    }
+    &_main{
+      width: calc(100% - 333px);
+      &:last-child{margin-bottom: 0;}   
+      @media only screen and (max-width : 1199px){width: calc(100% - 300px);}
+      @media only screen and (max-width : 1023px){
+        width: 100%;
+        clear: both;
+      }
+    }
+  }
+  &__map{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    width: 100vw;    
+    &-wrap{
+      position: relative;
+      height: 400px;
+      @media only screen and (max-width : 767px){height: 294px;}
+    }
+  }
+  &__bar{
+    float: right;
+    width: 280px;
+    @media only screen and (max-width : 767px){
+      float: none;
+      width: 100%;
+      .filter{margin-bottom: 0;}
+    }
+  }
+  @media only screen and (max-width : 767px){
+    &__wrap{
+      display: flex;
+      align-items: stretch;
+      justify-content: flex-start;
+      flex-direction: column;
+      & > *{width: 100%;}
+    }
+  }
+}
+
+.school-slider{
+  margin-bottom: 57px;
+  padding: 0 105px;
+  position: relative;
+  .slick-slide{outline: none}
+  .slick-list{overflow: visible;}
+  .slick-arrow{
+    z-index: 10;
+    opacity: 1;
+  }
+  .slick-prev{background-image: url(../img/svg/chevrone-prev-white.svg);}
+  .slick-next{background-image: url(../img/svg/chevrone-next-white.svg);}
+  @media only screen and (max-width : 767px){
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    padding: 0;
+    margin-bottom: 13px;
+    padding-bottom: 25px;
+    &:after{
+      content: 'Смахните вправо, чтобы посмотреть следующее фото';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 0 20px;
+      font-size: 12px;
+      color: $clr-grey;
+    }
+    &.is-swiped:after{display: none;}
+  }  
+}
+
+.school-main{
+  width: calc(100% - 333px);  
+  .sec__title{margin-bottom: 20px;}
+  &__header{
+    @include flex-center-start;
+    margin-bottom: 6px;
+  }
+  &__contry{
+    color: $clr-grey;
+    min-width: 205px;
+    margin-right: 20px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+  &__nav{
+    margin-bottom: 30px;
+    @include flex-center-start;
+    li{
+      margin-right: 35px;
+      &:last-child{margin-right: 0;}
+      a{
+        color: $clr-txt;
+        text-decoration: underline;
+        font-size: 18px;
+        &:hover{color: $clr-grey;}
+      }
+    }
+  }
+  &__txt{
+    font-size: 18px;
+    line-height: 25px;
+    p{margin: 1em 0;}
+  }
+  &__icns{
+    margin-top: 58px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+  &__icn{
+    text-align: center;
+    width: 162px;
+    &-pic{
+      height: 35px;
+      margin: 0 auto 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &-txt{
+      font-size: 14px;
+      line-height: 118.5%;
+    }
+  }
+  &__rait{
+    padding: 0;
+    .rait__main{@include flex-center-start;}
+    .rait__txt{
+      margin-bottom: 0;
+      margin-right: 15px;
+    }
+    .rait__hide{
+      right: auto;
+      left: calc(100% + 47px);
+      top: -18px;
+    }
+  }
+  @media only screen and (max-width : 1199px){
+    width: calc(100% - 300px);
+    &__nav{
+      li{margin-right: 25px;}
+    }
+  }
+  @media only screen and (max-width : 767px){
+    order: -1;
+    margin-bottom: 90px;
+    width: 100%;
+    .sec__title{
+      margin-bottom: 14px;
+      text-align: left;
+      font-weight: 600;
+    }
+    &__nav{
+      flex-wrap: wrap;
+      li{
+        margin-right: 29px;
+        margin-top: 14px;
+        a{
+          font-size: 16px;
+          line-height: 118.5%;
+        }
+      }
+    }
+    &__header{display: block;}
+    &__contry{
+      min-width: 100%;
+      margin-right: 0;
+      margin-bottom: 4px;
+    }
+    &__icns{
+      margin-top: 0;
+      flex-wrap: wrap;
+    }
+    &__icn{
+      max-width: 50%;
+      text-align: center;
+      margin-top: 40px;
+    }
+  }
+}

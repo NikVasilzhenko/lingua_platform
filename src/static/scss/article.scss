@@ -1,0 +1,99 @@
+.article{
+  margin: 0 auto 140px;
+  max-width: 692px;
+  &_about{max-width: 800px;}
+  .sec__title{margin-bottom: 40px;}
+  &__icns{
+    @include flex-center-center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  &__icn{
+    @include flex-center-start;
+    margin-right: 20px;
+    font-size: 14px;
+    margin-top: 12px;
+    &-pic{margin-right: 9px;}
+  }
+  &__pic{
+    height: 346px;
+    margin-bottom: 42px;
+    position: relative;
+    &-wrap{
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 100vw;
+      transform: translateX(-50%);
+      height: 100%;
+      background: center center no-repeat;
+      background-size: cover;
+    }
+  }
+  &__txt{
+    margin: 42px 0 47px;
+    font-size: 20px;
+    line-height: 153.9%;
+    p{margin: 1em 0;}
+    ul{
+      margin: .5em 0;
+      li{
+        &:before{
+          content: '•';
+          color: rgba(255, 138, 0, .5);
+          margin-right: .25em;
+        }
+      }
+    }
+  }
+  &__nav{
+    @include flex-center-between;
+    &-link{
+      color: $clr-txt;
+      font-size: 20px;
+      text-decoration: underline;
+      &:hover{color: $clr-grey;}
+      span{display: none;}
+      &:first-child{
+        padding-left: 21px;
+        background: url(../img/svg/chevrone-prev-article.svg) 0 center no-repeat;
+      }
+      &:last-child{
+        padding-right: 21px;
+        text-align: right;
+        background: url(../img/svg/chevrone-next-article.svg) right center no-repeat;
+      }
+    }
+  }
+  @media only screen and (max-width : 767px){
+    margin: 0 auto 90px;
+    .sec__title{margin-bottom: 34px;}
+    &__icns{margin-bottom: 22px;}
+    &__icn{
+      font-size: 12px;
+      margin: 0 16px 12px 0;
+      &-pic{margin-right: 9px;}
+    }
+    &__pic{
+      height: 240px;
+      margin-bottom: 36px;
+    }
+    &__txt{
+      margin: 36px 0;
+      font-size: 18px;
+      line-height: 25px;
+    }
+    &__nav{
+      &-link{
+        font-size: 0;
+        line-height: 0;
+        max-width: calc(50% - 10px);
+        span{
+          display: block;
+          font-size: 16px;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.page404{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  &__pic{
+    height: 183px;
+    margin: 0 auto 40px;
+  }
+  &__txt{
+    font-size: 20px;
+    line-height: 118.5%;
+    margin-bottom: 14px;
+    text-align: center;
+  }
+  @media only screen and (max-width : 767px){
+    &__pic{height: 95px;}
+    &__txt{
+      font-size: 14px;
+      margin-bottom: 0;
+      br{display: none;}
+    }
+  }  
+}

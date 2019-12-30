@@ -1,0 +1,55 @@
+<div class="contacts">  
+  <h1 class="sec__title">Контакты</h1>
+  <div class="contacts__wrap">
+    <div class="contacts__col">
+      <div class="contacts__main">
+        <div class="contacts__row">
+          <div class="contacts__name">Телефон:</div>
+          <div class="contacts__val"><a href="tel:+74991000069">+7 499 100 00 69</a></div>
+        </div>
+        <div class="contacts__row">
+          <div class="contacts__name">E-mail:</div>
+          <div class="contacts__val"><a href="mailto:info@mail.com">info@mail.com</a></div>
+        </div>
+        <div class="contacts__row">
+          <div class="contacts__name">Whatsapp:</div>
+          <div class="contacts__val"><a href="whatsapp://send?phone=+74991000069">+7 499 100 00 69</a></div>
+        </div>
+        <div class="contacts__row">
+          <div class="contacts__name">Skype:</div>
+          <div class="contacts__val"><a href="skype:loginskype">loginskype</a></div>
+        </div>
+        <div class="contacts__row">
+          <div class="contacts__name">Адрес:</div>
+          <div class="contacts__val">119121, г.&nbsp;Москва, 1&nbsp;-&nbsp;й&nbsp;Труженников&nbsp;пер, д.&nbsp;12, стр.&nbsp;1</div>
+        </div>
+      </div>
+    </div>
+    <div class="contacts__col">
+      <div class="contacts__map" id="js-map"></div>
+    </div>
+  </div>
+</div>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script>
+       ymaps.ready(init);
+       var map;						
+       function init(){     
+           map = new ymaps.Map("js-map", {
+               center: [55.737720, 37.573043],
+               zoom: 18,
+               controls: []
+           });
+           map.behaviors.disable('scrollZoom');
+           placemark = new ymaps.Placemark(
+               [55.737720, 37.573043],
+               { 
+                   balloonContent: 'Lorem ipsum'
+               },
+               {
+                   preset: 'islands#redDotIcon'	
+               }
+           );
+           map.geoObjects.add(placemark);
+       };        
+</script>

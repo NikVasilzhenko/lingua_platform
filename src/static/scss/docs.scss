@@ -1,0 +1,10 @@
+.doc-sec{
+  &__slide{
+    display: block;
+    margin: 0 11.5px;
+  }
+  @media only screen and (max-width : 767px){
+    &__slider {padding: 0 43px;}
+    &__slide{margin: 0 5px;}
+  }
+}

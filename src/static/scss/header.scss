@@ -1,0 +1,148 @@
+.header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  width: 100%;
+  padding: 28px 0;
+  &__menu,
+  &__wrap{
+    @include flex-center-between;
+  }
+  &__menu{padding: 0 30px;}
+  &_white{
+    .header-nav ul li a{
+      color: #fff;
+      &:hover{color: $clr-main;}
+    }
+    .header-burger{
+      span{background-color: #fff;}
+      &:hover{
+        span{background-color: $clr-main;}
+      }
+    }
+    .header-feedback__btn{
+      color: #fff;
+    }
+  }
+  &_dark{
+    .header-nav ul li a{
+      color: $clr-txt;
+      &:hover{color: $clr-main;}
+    }
+    .header-burger{
+      span{background-color: $clr-txt;}
+      &:hover{
+        span{background-color: $clr-main;}
+      }
+    }
+    .header-feedback__btn{
+      color: $clr-txt;
+    }
+  }
+}
+
+.header-logo{
+  display: block;
+  width: 178px;
+  img{width: 100%;}
+}
+
+.header-nav{
+  margin-right: 28px;
+  ul{
+    @include flex-center-between;
+    li{
+      margin-right: 40px;
+      &:last-child{margin-right: 0;}
+    }
+  }
+}
+
+.header-burger{
+  width: 22px;
+  height: 15px;
+  position: relative;
+  span{
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    position: absolute;
+    transition: background-color .25s linear;
+    left: 0;
+    &:nth-child(1){top: 0;}
+    &:nth-child(2){top: 6px;}
+    &:nth-child(3){top: 13px;}
+  }
+}
+
+.header-feedback{
+  position: relative;
+  &__btn{
+    width: 214px;
+    height: 38px;
+    line-height: 36px;
+    border: 1px solid $clr-main;
+    border-radius: 19px;
+    text-align: center;
+  }
+  &__hid{
+    width: 214px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    padding: 23px 23px 30px 23px;
+    border-radius: 5px;
+    display: none;
+  }
+  &__title{
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  &__link{
+    display: block;
+    white-space: nowrap;
+    color: $clr-txt;
+    margin-bottom: 5px;
+    padding-left: 35px;
+    line-height: 22px;
+    background: url(../img/svg/soc-whatsapp.svg) 0 center no-repeat;
+    background-size: contain;
+    font-size: 14px;
+  }
+  &__time{
+    color: $clr-grey;
+    font-size: 10px;
+    line-height: 73.19%;
+    padding-left: 35px;
+  }
+  &:hover{
+    .header-feedback__hid{
+      display: block;
+      animation: fadeIn .25s both linear;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media only screen and (max-width : 1023px){
+  .header{
+    padding: 30px 0;
+    &__wrap{@include flex-center-center;}
+    &__menu{padding: 0;}
+  }
+  .header-nav,
+  .header-feedback{display: none;}
+  .header-burger{
+    position: absolute;
+    top: 34px;
+    right: 20px;
+  }
+}
+@media only screen and (max-width : 767px){}

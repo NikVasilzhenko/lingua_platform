@@ -1,0 +1,50 @@
+//библиотеки и плагины
+@import "vendors.scss";
+
+//шрифты
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,600&display=swap&subset=cyrillic,cyrillic-ext,latin-ext');
+
+//переменный и миксины
+@import "_vars.scss";
+@import "_mix.scss";
+
+//базовые глобальные стили
+@import "basic.scss";
+
+//страницы
+
+//глобальные модули
+@import "intro.scss";
+@import "header.scss";
+@import "footer.scss";
+@import "popup.scss";
+@import "mob-menu.scss";
+@import "search.scss";
+
+//модули
+@import "main-sec.scss";
+@import "video-wrapper.scss";
+@import "pop-courses-sec.scss";
+@import "steps-sec.scss";
+@import "reviews-sec.scss";
+@import "advantages-sec.scss";
+@import "seo-sec.scss";
+@import "catalog.scss";
+@import "rait.scss";
+@import "filter.scss";
+@import "bar-visa.scss";
+@import "bar-txt.scss";
+@import "sort.scss";
+@import "item.scss";
+@import "catalog-seo.scss";
+@import "catalog-mob.scss";
+@import "school.scss";
+@import "list.scss";
+@import "pagination.scss";
+@import "article.scss";
+@import "docs.scss";
+@import "booking.scss";
+@import "page404.scss";
+@import "faq.scss";
+@import "accordion.scss";
+@import "contacts.scss";

@@ -1,0 +1,15 @@
+.seo-sec{
+  max-width: 870px;
+  margin: 0 auto;
+  text-align: center;
+  &__txt{
+    font-size: 18px;
+    line-height: 118.5%;
+  }
+  @media only screen and (max-width : 767px){
+    &__txt{
+      text-align: left;
+      line-height: 131.5%;
+    }
+  }
+}

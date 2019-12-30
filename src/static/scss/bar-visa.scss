@@ -1,0 +1,26 @@
+.bar-visa{
+  @include back-blc;
+  margin-bottom: 46px;
+  &__wrap{
+    position: relative;
+    z-index: 2;
+  }
+  &__title{
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  &__main{margin-bottom: 20px;}
+  &__row{
+    @include flex-start-between;
+    margin-bottom: 15px;
+  }
+  a{
+    color: $clr-txt;
+    text-decoration: underline;
+    &:hover{color: $clr-main;}
+  }
+  @media only screen and (max-width : 1023px){
+    display: none;    
+  }
+}

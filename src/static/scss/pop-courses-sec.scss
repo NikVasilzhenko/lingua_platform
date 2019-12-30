@@ -1,0 +1,103 @@
+.pop-courses-sec{
+  margin: 65px auto 48px;
+  &__slider{
+    .slick-track{
+      display: flex;
+      align-items: stretch;
+    }
+    .slick-slide{
+      float: none;
+      height: unset;
+    }
+  }
+  &__slide{
+    margin: 0 12.5px;    
+    border-radius: 5px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: column;
+    &-pic{width: 100%;}
+    &-main{
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-top: none;
+      border-radius:0 0 5px 5px;
+      flex-grow: 1;
+      position: relative;
+      padding: 22px 24px 80px;
+    }
+    &-land{
+      color: $clr-grey;
+      font-size: 12px;
+      line-height: 19px;
+    }
+    &-title{
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 1.35;
+      color: $clr-txt;
+    }
+    &-txt{
+      font-size: 16px;
+      line-height: 1;
+      color: #333;
+    }
+    &-price{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 0 24px 26px;
+      @include flex-center-start;
+      &-act{
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 34px;
+        color: #333;
+        margin-right: 14px;
+      }
+      &-old{
+        color: $clr-grey;
+        font-size: 14px;
+        text-decoration: line-through;
+        padding-top: 2px;
+      }
+    }
+  }
+  @media only screen and (max-width : 767px){
+    margin: 0 auto 46px;
+    &__slider{padding: 0 43px;}
+    &__slide{
+      margin: 0;
+      &-main{padding: 16px 18px 52px;}
+      &-land{
+        font-size: 10px;
+        line-height: 14px;
+      }
+      &-title{
+        font-size: 20px;
+        line-height: 27px;
+        margin-bottom: 7px;
+      }
+      &-txt{
+        font-size: 13px;
+        line-height: 16px;
+      }
+      &-price{
+        padding: 0 18px 20px;
+        &-act{
+          font-size: 20px;
+          line-height: 27px;
+          margin-right: 10px;
+        }
+        &-old{
+          font-size: 12px;
+          line-height: 16px;
+          padding-top: 0;
+        }
+      }
+    }
+  }
+}

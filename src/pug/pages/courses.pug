@@ -1,0 +1,22 @@
+extends ../layout/layout
+
+block header
+  include ../global_modules/header-dark.html
+block main
+  .page
+    .catalog
+      .container
+        h1.sec__title Выберите подходящий для вас курс
+        include ../modules/catalog-mob.html
+        .catalog__wrap
+          section.catalog__bar
+            include ../modules/courses-filter.html
+            include ../modules/bar-visa.html
+            include ../modules/bar-txt.html
+          .catalog__main
+            include ../modules/sort.html
+            .catalog__list
+              include ../modules/course-item.html
+              include ../modules/course-item.html
+              button.btn.btn_orange.sec__btn Показать еще
+            include ../modules/catalog-seo.html

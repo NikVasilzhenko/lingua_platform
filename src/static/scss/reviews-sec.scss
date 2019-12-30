@@ -1,0 +1,95 @@
+.reviews-sec{
+  margin-top: 65px;
+  &__slider{
+    .slick-track{
+      display: flex;
+      align-items: stretch;
+    }
+    .slick-slide{
+      float: none;
+      height: unset;
+    }
+  }
+  &__slide{
+    margin: 0 12.5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 42px 47px 111px 41px;
+    position: relative;
+    height: 100%;
+    &-header{
+      @include flex-center-start;
+      margin-bottom: 22px;
+      &-main{
+        width: calc(100% - 76px);
+      }
+      &-name{font-size: 18px;}
+      &-school{
+        color: $clr-grey;
+        font-size: 16px;
+      }
+    }
+    &-avatar{
+      width: 53px;
+      height: 53px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 23px;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-main{
+      font-size: 16px;
+      line-height: 118.5%;
+      p{margin: .3em 0;}
+    }
+    &-footer{
+      position: absolute;
+      z-index: 2;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 0 40px 42px;
+    }
+    &-btn{
+      width: 235px;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }  
+  @media only screen and (max-width : 767px){
+    margin-top: 0;
+    &__slider{padding: 0;}
+    &__slide{
+      margin: 0;
+      padding: 37px 27px 127px;
+      &-header{
+        margin-bottom: 20px;
+        &-main{width: calc(100% - 51px);}
+        &-name{
+          font-size: 16px;
+          line-height: 118.5%;
+        }
+        &-school{
+          font-size: 12px;
+          line-height: 118.5%;
+        }
+      }
+      &-avatar{
+        width: 36px;
+        height: 36px;
+        margin-right: 15px;
+      }
+      &-main{
+        font-size: 14px;
+        line-height: 118.5%;
+      }
+      &-footer{padding: 0 27px 48px;}
+      &-btn{width: 100%;}
+    }  
+    
+  }
+  
+}

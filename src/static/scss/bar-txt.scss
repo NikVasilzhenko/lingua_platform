@@ -1,0 +1,26 @@
+.bar-txt{
+  &__sec{margin-bottom: 46px;}
+  &__icn{margin-bottom: 20px;}
+  &__title{
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  &__main{
+    font-size: 13px;
+    line-height: 154%;
+    ul{
+      li{
+        margin-bottom: 1.54em;
+      }
+    }
+    a{
+      color: $clr-txt;
+      text-decoration: underline;
+      &:hover{color: $clr-main;}
+    }
+  }
+  @media only screen and (max-width : 1023px){
+    display: none;    
+  }
+}
